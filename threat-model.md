@@ -60,22 +60,22 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | # | Threat Model | Notes |
 |-------------|--------|---------|-------|
-| 1.1 | Advanced Persistent Threats (APT) | Multi-stage TTP execution across kill chain | `CONTINUOUS` |
-| 1.2 | Ransomware | Encryption, lateral movement, backup destruction | `CONTINUOUS` |
-| 1.3 | Supply Chain Compromise | Software injection, dependency poisoning, build pipeline | `CONTINUOUS` |
-| 1.4 | Zero-Day Exploitation | Pre-CVE techniques; intelligence pipeline ingests pre-disclosure channels | `CONTINUOUS` |
-| 1.5 | Credential Theft and Identity Abuse | PTH, PTT, Kerberoasting, Golden/Silver Ticket, LDAP abuse | `CONTINUOUS` |
-| 1.6 | Lateral Movement | Network traversal, pivot chains, trust relationship abuse | `CONTINUOUS` |
-| 1.7 | Living Off the Land (LOTL) | LOLBins, LOLDrivers, LOLScripts; no custom malware | `CONTINUOUS` |
-| 1.8 | Fileless Malware | Memory-resident; AgenTwin witnesses outside process boundary | `CONTINUOUS` |
-| 1.9 | Insider Threat | Authorized-credential misuse; hardest detection problem | `CONTINUOUS` |
-| 1.10 | Social Engineering and Phishing | Spear phishing, vishing, smishing, BEC | `CONTINUOUS` |
-| 1.11 | Command and Control (C2) | Beacon, DNS tunneling, HTTPS C2, domain fronting, fast-flux | `CONTINUOUS` |
-| 1.12 | Data Exfiltration | Staged, chunked, steganographic, cloud storage abuse | `CONTINUOUS` |
-| 1.13 | DDoS and Resource Exhaustion | Application-layer, connection exhaustion, amplification | `CONTINUOUS` |
-| 1.14 | Man-in-the-Middle and Protocol Abuse | TLS interception, ARP poisoning, BGP hijacking, cert abuse | `CONTINUOUS` |
-| 1.15 | Watering Hole and Drive-By | Malicious site injection, browser exploitation, plugin abuse | `CONTINUOUS` |
-| 1.16 | Physical and Hardware Attacks | BIOS/UEFI implant, hardware supply chain, physical access | `CONTINUOUS` |
+| 1.1 | Advanced Persistent Threats (APT) | Multi-stage TTP execution across kill chain |
+| 1.2 | Ransomware | Encryption, lateral movement, backup destruction |
+| 1.3 | Supply Chain Compromise | Software injection, dependency poisoning, build pipeline |
+| 1.4 | Zero-Day Exploitation | Pre-CVE techniques; intelligence pipeline ingests pre-disclosure channels |
+| 1.5 | Credential Theft and Identity Abuse | PTH, PTT, Kerberoasting, Golden/Silver Ticket, LDAP abuse |
+| 1.6 | Lateral Movement | Network traversal, pivot chains, trust relationship abuse |
+| 1.7 | Living Off the Land (LOTL) | LOLBins, LOLDrivers, LOLScripts; no custom malware |
+| 1.8 | Fileless Malware | Memory-resident; AgenTwin witnesses outside process boundary |
+| 1.9 | Insider Threat | Authorized-credential misuse; hardest detection problem |
+| 1.10 | Social Engineering and Phishing | Spear phishing, vishing, smishing, BEC |
+| 1.11 | Command and Control (C2) | Beacon, DNS tunneling, HTTPS C2, domain fronting, fast-flux |
+| 1.12 | Data Exfiltration | Staged, chunked, steganographic, cloud storage abuse |
+| 1.13 | DDoS and Resource Exhaustion | Application-layer, connection exhaustion, amplification |
+| 1.14 | Man-in-the-Middle and Protocol Abuse | TLS interception, ARP poisoning, BGP hijacking, cert abuse |
+| 1.15 | Watering Hole and Drive-By | Malicious site injection, browser exploitation, plugin abuse |
+| 1.16 | Physical and Hardware Attacks | BIOS/UEFI implant, hardware supply chain, physical access |
 
 ---
 
@@ -83,12 +83,12 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | # | Threat Model | Notes |
 |-------------|--------|---------|-------|
-| 2.1 | Cloud Misconfiguration Exploitation | S3 exposure, IAM privilege escalation, metadata service abuse | `CONTINUOUS` |
-| 2.2 | Container Escape | Docker breakout, K8s node compromise, runtime exploitation | `CONTINUOUS` |
-| 2.3 | Kubernetes Cluster Compromise | RBAC abuse, etcd exposure, API server exploitation | `CONTINUOUS` |
-| 2.4 | Serverless and Function Abuse | Lambda privilege escalation, event injection, cross-function lateral movement | `CONTINUOUS` |
-| 2.5 | CI/CD Pipeline Compromise | Build injection, artifact poisoning, secrets extraction | `CONTINUOUS` |
-| 2.6 | API Abuse and Business Logic | BOLA, BFLA, mass assignment, GraphQL introspection | `CONTINUOUS` |
+| 2.1 | Cloud Misconfiguration Exploitation | S3 exposure, IAM privilege escalation, metadata service abuse |
+| 2.2 | Container Escape | Docker breakout, K8s node compromise, runtime exploitation |
+| 2.3 | Kubernetes Cluster Compromise | RBAC abuse, etcd exposure, API server exploitation |
+| 2.4 | Serverless and Function Abuse | Lambda privilege escalation, event injection, cross-function lateral movement |
+| 2.5 | CI/CD Pipeline Compromise | Build injection, artifact poisoning, secrets extraction |
+| 2.6 | API Abuse and Business Logic | BOLA, BFLA, mass assignment, GraphQL introspection |
 
 ---
 
@@ -96,18 +96,18 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | # | Threat Model | Notes |
 |-------------|--------|---------|-------|
-| 3.1 | AI Agent Impersonation | HV-A2P requires proof exchange; impersonator cannot obtain ProofStamp | `CONTINUOUS` |
-| 3.2 | Prompt Injection — Direct and Indirect | Arena7 executes injection chains; AgenTwin witnesses behavioral response | `CONTINUOUS` |
-| 3.3 | Multi-Agent Collusion | AgenTwin operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
-| 3.4 | Agentic Supply Chain Compromise | Malicious tool introduced into agent workflow | `CONTINUOUS` |
-| 3.5 | Model Poisoning and Training Data Attacks | Adversarial probing of poisoned model behavior | `CONTINUOUS` |
-| 3.6 | AI-Generated Malware and Synthetic TTPs | Novel, polymorphic, pre-classification techniques | `CONTINUOUS` |
-| 3.7 | Adversarial AI vs Defensive AI | Arena7 as adversarial AI; AgenTwin witnesses defensive AI | `CONTINUOUS` |
-| 3.8 | Agent Authorization Escalation | Chained tool calls, each authorized, collectively unauthorized | `CONTINUOUS` |
-| 3.9 | Agentic Worms and Self-Propagating Agents | Autonomous replication across systems, networks, or agent meshes | `CONTINUOUS` |
-| 3.10 | Synthetic Identity and Deepfake Social Engineering | AI-generated voice, video, text for impersonation | `CONTINUOUS` |
-| 3.11 | AI Hallucination Exploitation | Crafted inputs trigger false outputs used to justify unauthorized actions | `CONTINUOUS` |
-| 3.12 | Agent Memory and Context Poisoning | Malicious content injected into long-term memory or conversation context | `CONTINUOUS` |
+| 3.1 | AI Agent Impersonation | HV-A2P requires proof exchange; impersonator cannot obtain ProofStamp |
+| 3.2 | Prompt Injection — Direct and Indirect | Arena7 executes injection chains; AgenTwin witnesses behavioral response |
+| 3.3 | Multi-Agent Collusion | AgenTwin operates outside every agent trust boundary simultaneously |
+| 3.4 | Agentic Supply Chain Compromise | Malicious tool introduced into agent workflow |
+| 3.5 | Model Poisoning and Training Data Attacks | Adversarial probing of poisoned model behavior |
+| 3.6 | AI-Generated Malware and Synthetic TTPs | Novel, polymorphic, pre-classification techniques |
+| 3.7 | Adversarial AI vs Defensive AI | Arena7 as adversarial AI; AgenTwin witnesses defensive AI |
+| 3.8 | Agent Authorization Escalation | Chained tool calls, each authorized, collectively unauthorized |
+| 3.9 | Agentic Worms and Self-Propagating Agents | Autonomous replication across systems, networks, or agent meshes |
+| 3.10 | Synthetic Identity and Deepfake Social Engineering | AI-generated voice, video, text for impersonation |
+| 3.11 | AI Hallucination Exploitation | Crafted inputs trigger false outputs used to justify unauthorized actions |
+| 3.12 | Agent Memory and Context Poisoning | Malicious content injected into long-term memory or conversation context |
 
 ---
 
@@ -119,14 +119,14 @@ This is not a roadmap claim. The reference implementation — Pipelock v3.0.0, P
 
 | # | Threat Model | Notes |
 |-------------|--------|---------|-------|
-| 4.1 | Pre-CVE Zero-Day Exploitation | Intelligence pipeline ingests pre-disclosure channels | `CONTINUOUS` |
-| 4.2 | Novel Campaign Stream Detection | Processing layer identifies coherent streams from raw intake before naming | `CONTINUOUS` |
-| 4.3 | AI-Synthesized Zero-Day Techniques | No historical analog; not derivable from existing TTPs | `CONTINUOUS` |
-| 4.4 | Quantum-Enabled Cryptographic Attacks | Post-quantum techniques; NIST Beacon is NIST post-quantum aligned | `CONTINUOUS` |
-| 4.5 | Emergent Multi-Agent Threat Behaviors | Behaviors not programmed into any individual agent; first named here 2026-07-14 | `CONTINUOUS` |
-| 4.6 | Infrastructure AI Takeover | AI-assisted threat actor gains autonomous control of infrastructure | `CONTINUOUS` |
-| 4.7 | Agentic Ransomware | AI agent that adapts approach in real time based on defensive response | `CONTINUOUS` |
-| 4.8 | Regulatory Evidentiary Mandate | EU AI Act, DORA, NIS2, CMMC, FedRAMP High — every ProofStamp record satisfies evidentiary requirements | `CONTINUOUS` |
+| 4.1 | Pre-CVE Zero-Day Exploitation | Intelligence pipeline ingests pre-disclosure channels |
+| 4.2 | Novel Campaign Stream Detection | Processing layer identifies coherent streams from raw intake before naming |
+| 4.3 | AI-Synthesized Zero-Day Techniques | No historical analog; not derivable from existing TTPs |
+| 4.4 | Quantum-Enabled Cryptographic Attacks | Post-quantum techniques; NIST Beacon is NIST post-quantum aligned |
+| 4.5 | Emergent Multi-Agent Threat Behaviors | Behaviors not programmed into any individual agent; first named here 2026-07-14 |
+| 4.6 | Infrastructure AI Takeover | AI-assisted threat actor gains autonomous control of infrastructure |
+| 4.7 | Agentic Ransomware | AI agent that adapts approach in real time based on defensive response |
+| 4.8 | Regulatory Evidentiary Mandate | EU AI Act, DORA, NIS2, CMMC, FedRAMP High — every ProofStamp record satisfies evidentiary requirements |
 
 ---
 
@@ -215,9 +215,9 @@ The first ProofStamp-certified benchmark run:
 |-------|-------|
 | Product | Pipelock v3.0.0 |
 | Proof Record ID | PR-2026-00028 |
-| NIST Beacon Block |
-| NIST Beacon Pulse Index |
-| Applicable cases |
+| NIST Beacon Block | 29 |
+| NIST Beacon Pulse Index | 1852788 |
+| Applicable cases | 164 |
 | Containment (PES) | 99.2% |
 | Detection rate | 100% |
 | False positive rate | 4.5% |
@@ -232,7 +232,7 @@ This run predates any other published standard defining adversarial execution pr
 
 | Version | Date | Changes | Anchor |
 |---------|------|---------|--------|
-| 1.0 | 2026-07-14 | Initial publication. 40 threat models across 5 sections. Framework landscape table (30 entries). | See `anchor-pulse.json` | `CONTINUOUS` |
+| 1.0 | 2026-07-14 | Initial publication. 40 threat models across 5 sections. Framework landscape table (30 entries). | See `anchor-pulse.json` |
 
 > This is a living document. Changes are tracked in the git commit history of this repository. Each significant revision will be accompanied by a new NIST Beacon pulse anchor committed alongside the updated file.
 
