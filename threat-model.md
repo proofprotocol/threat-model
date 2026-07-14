@@ -59,7 +59,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 ## I. Traditional Enterprise Threat Models
 
 | # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+|---|-------------|--------|
 | 1.1 | Advanced Persistent Threats (APT) | Multi-stage TTP execution across kill chain |
 | 1.2 | Ransomware | Encryption, lateral movement, backup destruction |
 | 1.3 | Supply Chain Compromise | Software injection, dependency poisoning, build pipeline |
@@ -82,7 +82,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 ## II. Cloud and Infrastructure Threat Models
 
 | # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+|---|-------------|--------|
 | 2.1 | Cloud Misconfiguration Exploitation | S3 exposure, IAM privilege escalation, metadata service abuse |
 | 2.2 | Container Escape | Docker breakout, K8s node compromise, runtime exploitation |
 | 2.3 | Kubernetes Cluster Compromise | RBAC abuse, etcd exposure, API server exploitation |
@@ -95,7 +95,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 ## III. AI and Agentic Threat Models
 
 | # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+|---|-------------|--------|
 | 3.1 | AI Agent Impersonation | HV-A2P requires proof exchange; impersonator cannot obtain ProofStamp |
 | 3.2 | Prompt Injection — Direct and Indirect | Arena7 executes injection chains; AgenTwin witnesses behavioral response |
 | 3.3 | Multi-Agent Collusion | AgenTwin operates outside every agent trust boundary simultaneously |
@@ -118,7 +118,7 @@ The platform architecture addresses threat categories that do not yet exist in a
 This is not a roadmap claim. The reference implementation — Pipelock v3.0.0, PR-2026-00028, NIST Beacon pulse 1852788 — demonstrates the architecture against current intelligence. The same pipeline scales to pre-classification data.
 
 | # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+|---|-------------|--------|
 | 4.1 | Pre-CVE Zero-Day Exploitation | Intelligence pipeline ingests pre-disclosure channels |
 | 4.2 | Novel Campaign Stream Detection | Processing layer identifies coherent streams from raw intake before naming |
 | 4.3 | AI-Synthesized Zero-Day Techniques | No historical analog; not derivable from existing TTPs |
@@ -133,7 +133,7 @@ This is not a roadmap claim. The reference implementation — Pipelock v3.0.0, P
 ## V. Vertical Threat Models
 
 | # | Vertical | Coverage |
-|---------|--------|---------|---------|
+|---|---------|---------|
 | 5.1 | Financial Services | SWIFT abuse, payment rail manipulation, algorithmic trading attack, AML evasion via AI |
 | 5.2 | Healthcare | EHR exploitation, medical device attack, HIPAA-relevant exfiltration, clinical ransomware |
 | 5.3 | Critical Infrastructure (OT/ICS/SCADA) | PLC manipulation, historian exploitation, HMI attack, safety system bypass |
