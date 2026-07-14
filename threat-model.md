@@ -1,7 +1,7 @@
 # Proof Protocol Living Threat Model
 
 **Document ID:** PP-THREAT-001  
-**Version:** 1.0  
+**Version:** 1.0   
 **Status:** Living Document  
 **License:** CC BY 4.0  
 **Maintained by:** Proof Economy Standards Alliance (PESA)  
