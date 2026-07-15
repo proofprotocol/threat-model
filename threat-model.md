@@ -1,3 +1,5 @@
+> **Zenodo DOI:** [10.5281/zenodo.21379780](https://doi.org/10.5281/zenodo.21379780) — Published 2026-07-15
+
 # Proof Protocol™ Living Threat Model
 
 **Document ID:** PP-THREAT-001  
