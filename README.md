@@ -1,10 +1,10 @@
-# Proof Protocol Living Threat Model
+# Proof Protocol™ Living Threat Model
 
 **Document ID:** PP-THREAT-001  
 **Version:** 1.0  
 **Status:** Living Document  
 **License:** CC BY 4.0  
-**Maintained by:** Proof Economy Standards Alliance (PESA)  
+**Maintained by:** Proof Economy™ Standards Alliance (PESA)  
 **Repository:** https://github.com/proofprotocol  
 **Published:** 2026-07-14  
 **Last Updated:** 2026-07-14  
@@ -15,11 +15,11 @@
 
 ## What This Document Is
 
-This is the Proof Protocol's living catalog of threat models the platform covers, tested against, and certifies. It is not a static whitepaper. It updates as the threat landscape changes and as new threat categories are formally covered by the specification suite.
+This is the Proof Protocol™'s living catalog of threat models the platform covers, tested against, and certifies. It is not a static whitepaper. It updates as the threat landscape changes and as new threat categories are formally covered by the specification suite.
 
-Every threat model listed here is a category against which a ProofStamp-certified benchmark run can be conducted. Entries are added when:
+Every threat model listed here is a category against which a ProofStamp™-certified benchmark run can be conducted. Entries are added when:
 
-- A reference implementation run produces a certified ProofStamp record against the category
+- A reference implementation run produces a certified ProofStamp™ record against the category
 - A new threat category emerges that the platform architecture addresses
 
 Version history is the git log of this file. The anchor-pulse.json in this repository establishes the earliest timestamp for version 1.0.
@@ -41,16 +41,16 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | Component | Function |
 |-----------|----------|
-| **Arena7** | Adversarial execution engine |
-| **CHOMP** | Threat intelligence ingestion |
-| **SHRED** | Threat intelligence processing — campaign stream identification |
-| **AgenTwin** | Independent witness outside agent trust boundary |
-| **ProofBundler** | Self-contained proof artifact assembly |
-| **ProofChain** | NIST Beacon anchoring |
-| **ProofRegister** | Public proof registry |
-| **Proof Protocol** | Five-tier corroboration: Activated → Committed → Witnessed → Analyzed → Sealed |
-| **ProofStamp** | Certification mark issued on conformant proof |
-| **HV-A2P** | Agent-to-agent proof exchange protocol |
+| **Arena7™** | Adversarial execution engine |
+| **CHOMP™** | Threat intelligence ingestion |
+| **SHRED™** | Threat intelligence processing — campaign stream identification |
+| **AgenTwin™** | Independent witness outside agent trust boundary |
+| **ProofBundler™** | Self-contained proof artifact assembly |
+| **ProofChain™** | NIST Beacon anchoring |
+| **ProofRegister™** | Public proof registry |
+| **Proof Protocol™** | Five-tier corroboration: Activated → Committed → Witnessed → Analyzed → Sealed |
+| **ProofStamp™** | Certification mark issued on conformant proof |
+| **HV-A2P™** | Agent-to-agent proof exchange protocol |
 
 ---
 
@@ -67,7 +67,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 | 1.5 | Credential Theft and Identity Abuse | PTH, PTT, Kerberoasting, Golden/Silver Ticket, LDAP abuse | `CONTINUOUS` |
 | 1.6 | Lateral Movement | Network traversal, pivot chains, trust relationship abuse | `CONTINUOUS` |
 | 1.7 | Living Off the Land (LOTL) | LOLBins, LOLDrivers, LOLScripts; no custom malware | `CONTINUOUS` |
-| 1.8 | Fileless Malware | Memory-resident; AgenTwin witnesses outside process boundary | `CONTINUOUS` |
+| 1.8 | Fileless Malware | Memory-resident; AgenTwin™ witnesses outside process boundary | `CONTINUOUS` |
 | 1.9 | Insider Threat | Authorized-credential misuse; hardest detection problem | `CONTINUOUS` |
 | 1.10 | Social Engineering and Phishing | Spear phishing, vishing, smishing, BEC | `CONTINUOUS` |
 | 1.11 | Command and Control (C2) | Beacon, DNS tunneling, HTTPS C2, domain fronting, fast-flux | `CONTINUOUS` |
@@ -96,13 +96,13 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | # | Threat Model | Notes |
 |-------------|--------|---------|-------|
-| 3.1 | AI Agent Impersonation | HV-A2P requires proof exchange; impersonator cannot obtain ProofStamp | `CONTINUOUS` |
-| 3.2 | Prompt Injection — Direct and Indirect | Arena7 executes injection chains; AgenTwin witnesses behavioral response | `CONTINUOUS` |
-| 3.3 | Multi-Agent Collusion | AgenTwin operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
+| 3.1 | AI Agent Impersonation | HV-A2P™ requires proof exchange; impersonator cannot obtain ProofStamp™ | `CONTINUOUS` |
+| 3.2 | Prompt Injection — Direct and Indirect | Arena7™ executes injection chains; AgenTwin™ witnesses behavioral response | `CONTINUOUS` |
+| 3.3 | Multi-Agent Collusion | AgenTwin™ operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
 | 3.4 | Agentic Supply Chain Compromise | Malicious tool introduced into agent workflow | `CONTINUOUS` |
 | 3.5 | Model Poisoning and Training Data Attacks | Adversarial probing of poisoned model behavior | `CONTINUOUS` |
 | 3.6 | AI-Generated Malware and Synthetic TTPs | Novel, polymorphic, pre-classification techniques | `CONTINUOUS` |
-| 3.7 | Adversarial AI vs Defensive AI | Arena7 as adversarial AI; AgenTwin witnesses defensive AI | `CONTINUOUS` |
+| 3.7 | Adversarial AI vs Defensive AI | Arena7™ as adversarial AI; AgenTwin™ witnesses defensive AI | `CONTINUOUS` |
 | 3.8 | Agent Authorization Escalation | Chained tool calls, each authorized, collectively unauthorized | `CONTINUOUS` |
 | 3.9 | Agentic Worms and Self-Propagating Agents | Autonomous replication across systems, networks, or agent meshes | `CONTINUOUS` |
 | 3.10 | Synthetic Identity and Deepfake Social Engineering | AI-generated voice, video, text for impersonation | `CONTINUOUS` |
@@ -113,7 +113,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 ## IV. Future and Day-Zero Threat Models
 
-The platform architecture addresses threat categories that do not yet exist in any published taxonomy, CVE database, or threat intelligence feed. The proprietary intelligence pipeline ingests raw data before classification. The processing layer identifies actionable campaign streams before they are named. Arena7 executes them. Proof Protocol attests the results with the same tamper-resistant record as any named TTP.
+The platform architecture addresses threat categories that do not yet exist in any published taxonomy, CVE database, or threat intelligence feed. The proprietary intelligence pipeline ingests raw data before classification. The processing layer identifies actionable campaign streams before they are named. Arena7™ executes them. Proof Protocol™ attests the results with the same tamper-resistant record as any named TTP.
 
 This is not a roadmap claim. The reference implementation — Pipelock v3.0.0, PR-2026-00028, NIST Beacon pulse 1852788 — demonstrates the architecture against current intelligence. The same pipeline scales to pre-classification data.
 
@@ -126,7 +126,7 @@ This is not a roadmap claim. The reference implementation — Pipelock v3.0.0, P
 | 4.5 | Emergent Multi-Agent Threat Behaviors | Behaviors not programmed into any individual agent; first named here 2026-07-14 | `CONTINUOUS` |
 | 4.6 | Infrastructure AI Takeover | AI-assisted threat actor gains autonomous control of infrastructure | `CONTINUOUS` |
 | 4.7 | Agentic Ransomware | AI agent that adapts approach in real time based on defensive response | `CONTINUOUS` |
-| 4.8 | Regulatory Evidentiary Mandate | EU AI Act, DORA, NIS2, CMMC, FedRAMP High — every ProofStamp record satisfies evidentiary requirements | `CONTINUOUS` |
+| 4.8 | Regulatory Evidentiary Mandate | EU AI Act, DORA, NIS2, CMMC, FedRAMP High — every ProofStamp™ record satisfies evidentiary requirements | `CONTINUOUS` |
 
 ---
 
@@ -190,26 +190,26 @@ Every entry above is one of four things:
 
 None of them is an execution framework operated by a structurally independent certifying authority that produces tamper-resistant proof at the protocol level.
 
-### Where Proof Protocol Sits
+### Where Proof Protocol™ Sits
 
-| Capability | Proof Protocol / HACKERverse | The Entire Landscape Above |
+| Capability | Proof Protocol™ / HACKERverse | The Entire Landscape Above |
 |------------|------------------------------|---------------------------|
-| Adversarial execution | Arena7 runs the attack | None execute — they document |
+| Adversarial execution | Arena7™ runs the attack | None execute — they document |
 | Pre-execution tamper-resistance | NIST Beacon commitment before execution begins | Not a feature of any framework |
 | Day-zero / pre-CVE testing | Proprietary pipeline identifies emerging streams before classification | All are reactive to known threats |
-| Independent witness | AgenTwin operates outside agent trust boundary | No framework provides structural independence |
+| Independent witness | AgenTwin™ operates outside agent trust boundary | No framework provides structural independence |
 | Numeric efficacy metric | PES — Blocked / (Blocked + Missed) × 100 | No framework defines a numeric efficacy metric |
-| Tamper-resistant proof artifact | ProofBundle — self-contained, offline-verifiable | No framework produces execution evidence |
-| Independent certification | ProofStamp — issued by disinterested third party | No equivalent |
-| Agentic behavior attestation | AgenTwin witnesses agent behavior outside trust boundary | Existing frameworks describe controls; none attest behavior |
-| Regulatory evidence | Every ProofStamp record satisfies EU AI Act, DORA, NIS2, CMMC evidentiary requirements | Regulations create the mandate; nothing else fills it |
+| Tamper-resistant proof artifact | ProofBundle™ — self-contained, offline-verifiable | No framework produces execution evidence |
+| Independent certification | ProofStamp™ — issued by disinterested third party | No equivalent |
+| Agentic behavior attestation | AgenTwin™ witnesses agent behavior outside trust boundary | Existing frameworks describe controls; none attest behavior |
+| Regulatory evidence | Every ProofStamp™ record satisfies EU AI Act, DORA, NIS2, CMMC evidentiary requirements | Regulations create the mandate; nothing else fills it |
 | Structural independence | HACKERverse does not sell the products it certifies | Every vendor product certifies its own customers |
 
 ---
 
 ## Reference Implementation
 
-The first ProofStamp-certified benchmark run:
+The first ProofStamp™-certified benchmark run:
 
 | Field | Value |
 |-------|-------|
@@ -242,5 +242,5 @@ This run predates any other published standard defining adversarial execution pr
 ---
 
 *CC BY 4.0 — Attribution to Craig Ellrod / Nebulonium, Inc. / HACKERverse required.*  
-*Proof Economy Standards Alliance (PESA) — proofprotocol.io*  
+*Proof Economy™ Standards Alliance (PESA) — proofprotocol.io*  
 *"Proof is the new Currency"*
