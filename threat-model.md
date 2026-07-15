@@ -241,6 +241,6 @@ This run predates any other published standard defining adversarial execution pr
 
 ---
 
-*CC BY 4.0 — Attribution to Craig Ellrod / Nebulonium, Inc. / HACKERverse required.*  
+*CC BY 4.0 — Attribution to Craig Ellrod / Nebulonium, Inc. required.*  
 *Proof Economy™ Standards Alliance (PESA) — proofprotocol.io*  
 *"Proof is the new Currency"*
