@@ -50,7 +50,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 | **ProofRegister™** | Public proof registry |
 | **Proof Protocol™** | Five-tier corroboration: Activated → Committed → Witnessed → Analyzed → Sealed |
 | **ProofStamp™** | Certification mark issued on conformant proof |
-| **HV-A2P™** | Agent-to-agent proof exchange protocol |
+| **PP-A2P™** | Agent-to-agent proof exchange protocol |
 
 ---
 
@@ -96,7 +96,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 | # | Threat Model | Notes |
 |---|-------------|--------|
-| 3.1 | AI Agent Impersonation | HV-A2P™ requires proof exchange; impersonator cannot obtain ProofStamp™ |
+| 3.1 | AI Agent Impersonation | PP-A2P™ requires proof exchange; impersonator cannot obtain ProofStamp™ |
 | 3.2 | Prompt Injection — Direct and Indirect | Arena7™ executes injection chains; AgenTwin™ witnesses behavioral response |
 | 3.3 | Multi-Agent Collusion | AgenTwin™ operates outside every agent trust boundary simultaneously |
 | 3.4 | Agentic Supply Chain Compromise | Malicious tool introduced into agent workflow |
