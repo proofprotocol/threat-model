@@ -2,14 +2,14 @@
 
 # Proof Protocol™ Living Threat Model
 
-**Document ID:** PP-THREAT-001  
-**Version:** 1.0  
-**Status:** Living Document  
-**License:** CC BY 4.0  
-**Maintained by:** Proof Economy™ Standards Alliance (PESA)  
-**Repository:** https://github.com/proofprotocol  
-**Published:** 2026-07-14  
-**Last Updated:** 2026-07-14  
+**Document ID:** PP-THREAT-001
+**Version:** 1.0
+**Status:** Living Document
+**License:** CC BY 4.0
+**Maintained by:** Proof Economy™ Standards Alliance (PESA)
+**Repository:** https://github.com/proofprotocol
+**Published:** 2026-07-14
+**Last Updated:** 2026-07-14
 
 > **Anchor:** This document was first published on 2026-07-14 and anchored to the NIST Randomness Beacon at publication time. See `anchor-pulse.json` in this repository for the tamper-resistant timestamp. All subsequent revisions are recorded in the git commit history of this repository, which constitutes the provenance chain for this living document.
 
@@ -32,10 +32,9 @@ Version history is the git log of this file. The anchor-pulse.json in this repos
 |--------|-----------|---------|
 | `PRE-DATED` | The commitment exists before execution begins. NIST Beacon pulse captured before a single test case runs. The proof precedes the claim. Cannot be fabricated retroactively. | Pipelock PR-2026-00028 - pulse 1852788 captured before execution |
 | `CONTINUOUS` | The benchmark is designed to test this category on an ongoing cadence as the threat landscape moves. Not a snapshot. Not a point-in-time audit. | All threat model categories in this document |
-| `POST-DATED` | Documented threats that already existed at time of publication. Describes the known. Does not test the unknown. Does not move with the landscape. | OWASP Top 10 · MITRE ATLAS · NIST AI RMF · ISO 42001 · every framework in Section VI |
+| `POST-DATED` | Documented threats that already existed at time of publication. Describes the known. Does not test the unknown. Does not move with the landscape. | Frameworks discussed in Section VI |
 
 Proof Benchmark runs are **pre-dated by design**. Every other framework in the landscape is **post-dated by nature**.
-
 
 ---
 
@@ -56,12 +55,10 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 ---
 
----
-
 ## I. Traditional Enterprise Threat Models
 
-| # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+| # | Threat Model | Notes | Timing |
+|---|---------------|-------|--------|
 | 1.1 | Advanced Persistent Threats (APT) | Multi-stage TTP execution across kill chain | `CONTINUOUS` |
 | 1.2 | Ransomware | Encryption, lateral movement, backup destruction | `CONTINUOUS` |
 | 1.3 | Supply Chain Compromise | Software injection, dependency poisoning, build pipeline | `CONTINUOUS` |
@@ -83,8 +80,8 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 ## II. Cloud and Infrastructure Threat Models
 
-| # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+| # | Threat Model | Notes | Timing |
+|---|---------------|-------|--------|
 | 2.1 | Cloud Misconfiguration Exploitation | S3 exposure, IAM privilege escalation, metadata service abuse | `CONTINUOUS` |
 | 2.2 | Container Escape | Docker breakout, K8s node compromise, runtime exploitation | `CONTINUOUS` |
 | 2.3 | Kubernetes Cluster Compromise | RBAC abuse, etcd exposure, API server exploitation | `CONTINUOUS` |
@@ -96,8 +93,8 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 
 ## III. AI and Agentic Threat Models
 
-| # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+| # | Threat Model | Notes | Timing |
+|---|---------------|-------|--------|
 | 3.1 | AI Agent Impersonation | PP-A2P™ requires proof exchange; impersonator cannot obtain ProofStamp™ | `CONTINUOUS` |
 | 3.2 | Prompt Injection - Direct and Indirect | Arena7™ executes injection chains; AgenTwin™ witnesses behavioral response | `CONTINUOUS` |
 | 3.3 | Multi-Agent Collusion | AgenTwin™ operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
@@ -119,8 +116,8 @@ The platform architecture addresses threat categories that do not yet exist in a
 
 This is not a roadmap claim. The reference implementation - Pipelock v3.0.0, PR-2026-00028, NIST Beacon pulse 1852788 - demonstrates the architecture against current intelligence. The same pipeline scales to pre-classification data.
 
-| # | Threat Model | Notes |
-|-------------|--------|---------|-------|
+| # | Threat Model | Notes | Timing |
+|---|---------------|-------|--------|
 | 4.1 | Pre-CVE Zero-Day Exploitation | Intelligence pipeline ingests pre-disclosure channels | `CONTINUOUS` |
 | 4.2 | Novel Campaign Stream Detection | Processing layer identifies coherent streams from raw intake before naming | `CONTINUOUS` |
 | 4.3 | AI-Synthesized Zero-Day Techniques | No historical analog; not derivable from existing TTPs | `CONTINUOUS` |
@@ -135,7 +132,7 @@ This is not a roadmap claim. The reference implementation - Pipelock v3.0.0, PR-
 ## V. Vertical Threat Models
 
 | # | Vertical | Coverage |
-|---------|--------|---------|---------|
+|---|----------|----------|
 | 5.1 | Financial Services | SWIFT abuse, payment rail manipulation, algorithmic trading attack, AML evasion via AI |
 | 5.2 | Healthcare | EHR exploitation, medical device attack, HIPAA-relevant exfiltration, clinical ransomware |
 | 5.3 | Critical Infrastructure (OT/ICS/SCADA) | PLC manipulation, historian exploitation, HMI attack, safety system bypass |
@@ -146,66 +143,49 @@ This is not a roadmap claim. The reference implementation - Pipelock v3.0.0, PR-
 
 ## VI. The Framework Landscape
 
-Every published AI security framework as of July 2026, and what it cannot do.
+As of July 2026, the published AI security and governance landscape falls into four categories. None of them, individually or collectively, produce adversarial execution evidence at the protocol level.
 
-| Framework | Owner | Type | What It Does | What It Cannot Do |
-|---------------|------|--------------|-------------------|
-| MAESTRO | CSA / Ken Huang (Feb 2025) | Governance | 7-layer threat identification for agentic AI | Produce evidence that any threat was tested or contained |
-| AICM | CSA | Governance | 243 controls across 18 domains | Attest any control was exercised under adversarial conditions |
-| ATF | CSA | Governance | Operationalizes AICM for agents; Zero Trust framing | Prove an agent operated within defined boundaries |
-| STAR for AI | CSAI Foundation | Governance | Catastrophic risk annex to CSA STAR | Produce contemporaneous execution evidence |
-| OWASP LLM Top 10 | OWASP (Aug 2023, updated 2025) | Taxonomy | Ranked LLM vulnerability list | Test for any or prove a system resists them |
-| OWASP Agentic Threats v1.0a | OWASP (Feb 2025) | Taxonomy | 15 agentic threat categories | Execute those threats or produce proof of containment |
-| OWASP Multi-Agentic Threat Modeling Guide | OWASP (Apr 2025) | Methodology | Structured threat modeling for multi-agent systems | Run the threat model or attest its results |
-| OWASP Top 10 for Agentic Applications 2026 | OWASP (Dec 2025) | Taxonomy | Top 10 agentic application risks | Certify a system's posture against any of the 10 |
-| MITRE ATLAS | MITRE | Taxonomy | Adversarial ML technique catalog | Execute techniques or produce certified containment records |
-| NIST AI RMF 1.0 | NIST | Governance | Govern, map, measure, manage AI risk | Produce adversarial execution evidence |
-| NIST AI 600-1 | NIST | Governance | Risk management for generative AI | Certify generative AI behavior under adversarial pressure |
-| NIST AI 100-2 | NIST | Taxonomy | Adversarial ML attacks and mitigations terminology | Test for any named attack or prove mitigation |
-| NIST CAISI Agent Standards Initiative | NIST (Feb 2026) | Governance | US government AI agent standards program | Produce anything certifiable; launched five months ago |
-| COSAiS | NIST | Governance | SP 800-53 control overlays for five AI use cases | Generate adversarial execution proof |
-| Google SAIF / SAIF 2.0 | Google | Vendor | Embed security into AI model development | Certify third-party systems |
-| Cisco DefenseClaw | Cisco (Mar 2026) | Vendor | Skills scanner, MCP scanner, AI BOM | Produce certified proof of adversarial containment; scan ≠ test |
-| Cisco AI Defense | Cisco | Vendor | Runtime guardrails and red teaming | Issue independent certification |
-| Palo Alto AIRS 3 | Palo Alto Networks | Vendor | Agent lifecycle security | Certify independently |
-| CrowdStrike AI Runtime Protection | CrowdStrike | Vendor | Runtime AI agent protection and shadow AI discovery | Produce tamper-resistant proof of containment |
-| Microsoft Entra Agent ID | Microsoft | Vendor | Agent identity within Microsoft enterprise perimeter | Attest agent behavior outside the Microsoft perimeter |
-| Anthropic Trustworthy Agents / Zero Trust for AI | Anthropic (Apr–May 2026) | Vendor | Model-layer safety and zero trust principles | Certify third-party systems |
-| AIUC-1 | AI Underwriting Consortium / Lovable (May 2026) | Governance | Six control families for coding agents | Independent adversarial execution proof; Lovable co-created and self-certified |
-| ASF | Jeff Sutherland | Governance | Agent Security Framework | Produce evidence of incidents it tracks |
-| MATRA | Academic | Taxonomy | Model the attack surface of agentic AI systems | Execute against that surface or certify results |
-| CoSAI | Linux Foundation | Governance | Coalition for Secure AI - working groups | Generate execution evidence |
-| C2PA | Content Provenance | Governance | Origin and edit history of media content | Cover runtime AI agent behavior |
-| EU AI Act | European Commission (Aug 2026) | Regulation | Risk-based requirements for AI systems in the EU | Specify which technical standard demonstrates compliance |
-| ISO/IEC 42001 | ISO | Governance | Certifiable AI management system | Produce adversarial execution proof; process audit, not a test |
-| DORA | EU | Regulation | Digital operational resilience for financial services | Define what constitutes adversarial test evidence |
-| NIS2 | EU | Regulation | Network and information security | Specify technical standard for AI-specific testing |
+### Taxonomies
+
+Threat and vulnerability taxonomies name and classify risks — ranked vulnerability lists, technique catalogs, and threat modeling guides for agentic and LLM systems. They give the industry shared vocabulary for what can go wrong. They do not execute tests against the risks they name, and they do not produce evidence that a given system resists them.
+
+### Governance Frameworks
+
+Governance frameworks define what controls, layers, or risk-management processes *should* exist — control catalogs, layered threat-identification models, risk management frameworks, and management-system standards. They describe the shape of a defensible program. They do not run adversarial tests and do not themselves produce execution evidence; several require or recommend third-party assessment, but the assessment is a process review, not an adversarial proof artifact.
+
+### Vendor Products
+
+Individual security vendors ship runtime guardrails, agent identity systems, red-teaming tools, and AI bill-of-materials scanners as part of their own product lines. These are real and often valuable capabilities. Structurally, though, a vendor's own tooling is not a disinterested third party with respect to its own customers, and none of these products issue independent, cross-vendor certification.
+
+### Regulations
+
+Regulatory frameworks (the EU AI Act, DORA, NIS2, and comparable regimes) mandate outcomes — risk-based requirements, operational resilience, network security — without specifying the technical standard that demonstrates compliance. They create the demand for verifiable evidence. They do not supply the evidentiary mechanism themselves.
 
 ### The Pattern
 
-Every entry above is one of four things:
+Every framework in the current landscape is one of these four things:
 
-- **Taxonomy** - names threats. Does not test for them. Does not prove a system resists them.
-- **Governance framework** - defines what controls should exist. Does not execute adversarial tests. Does not produce evidence.
-- **Vendor product** - secures vendor customers. Not a disinterested third party. Cannot issue independent certification.
-- **Regulation** - mandates outcomes. Does not specify the technical standard that demonstrates compliance. Creates demand for the proof. Does not supply it.
+- **Taxonomy** — names threats. Does not test for them. Does not prove a system resists them.
+- **Governance framework** — defines what controls should exist. Does not execute adversarial tests. Does not produce evidence.
+- **Vendor product** — secures vendor customers. Not a disinterested third party. Cannot issue independent certification.
+- **Regulation** — mandates outcomes. Does not specify the technical standard that demonstrates compliance. Creates demand for the proof. Does not supply it.
 
 None of them is an execution framework operated by a structurally independent certifying authority that produces tamper-resistant proof at the protocol level.
 
 ### Where Proof Protocol™ Sits
 
-| Capability | Proof Protocol™ / HACKERverse | The Entire Landscape Above |
-|------------|------------------------------|---------------------------|
-| Adversarial execution | Arena7™ runs the attack | None execute - they document |
-| Pre-execution tamper-resistance | NIST Beacon commitment before execution begins | Not a feature of any framework |
-| Day-zero / pre-CVE testing | Proprietary pipeline identifies emerging streams before classification | All are reactive to known threats |
-| Independent witness | AgenTwin™ operates outside agent trust boundary | No framework provides structural independence |
-| Numeric efficacy metric | PES - Blocked / (Blocked + Missed) × 100 | No framework defines a numeric efficacy metric |
-| Tamper-resistant proof artifact | ProofBundle™ - self-contained, offline-verifiable | No framework produces execution evidence |
-| Independent certification | ProofStamp™ - issued by disinterested third party | No equivalent |
-| Agentic behavior attestation | AgenTwin™ witnesses agent behavior outside trust boundary | Existing frameworks describe controls; none attest behavior |
+| Capability | Proof Protocol™ / HACKERverse | The Landscape Above |
+|---|---|---|
+| Adversarial execution | Arena7™ runs the attack | Documented, not executed |
+| Pre-execution tamper-resistance | NIST Beacon commitment before execution begins | Not a feature of taxonomies, governance frameworks, or regulations |
+| Day-zero / pre-CVE testing | Proprietary pipeline identifies emerging streams before classification | Reactive to known, classified threats |
+| Independent witness | AgenTwin™ operates outside agent trust boundary | Structural independence not provided by vendor tooling |
+| Numeric efficacy metric | PES – Blocked / (Blocked + Missed) × 100 | No numeric efficacy metric defined |
+| Tamper-resistant proof artifact | ProofBundle™ – self-contained, offline-verifiable | Execution evidence not produced |
+| Independent certification | ProofStamp™ – issued by a disinterested third party | Vendor products certify their own customers, not independently |
+| Agentic behavior attestation | AgenTwin™ witnesses agent behavior outside trust boundary | Controls are described; behavior is not attested |
 | Regulatory evidence | Every ProofStamp™ record satisfies EU AI Act, DORA, NIS2, CMMC evidentiary requirements | Regulations create the mandate; nothing else fills it |
-| Structural independence | HACKERverse does not sell the products it certifies | Every vendor product certifies its own customers |
+| Structural independence | HACKERverse does not sell the products it certifies | Vendor products certify their own customers |
 
 ---
 
@@ -217,13 +197,13 @@ The first ProofStamp™-certified benchmark run:
 |-------|-------|
 | Product | Pipelock v3.0.0 |
 | Proof Record ID | PR-2026-00028 |
-| NIST Beacon Block |
-| NIST Beacon Pulse Index |
-| Applicable cases |
+| NIST Beacon Block | *[value missing — fill in before publishing]* |
+| NIST Beacon Pulse Index | *[value missing — fill in before publishing]* |
+| Applicable cases | *[value missing — fill in before publishing]* |
 | Containment (PES) | 99.2% |
 | Detection rate | 100% |
 | False positive rate | 4.5% |
-| Administered by | HACKERverse® Independent Test Lab |
+| Administered by | Nebulonium, Inc. (d/b/a HACKERverse® Independent Test Lab) |
 | Certification date | 2026-07 |
 
 This run predates any other published standard defining adversarial execution proof requirements for AI security tools. It is the reference implementation for threat models 1.1 through 4.8.
@@ -234,15 +214,12 @@ This run predates any other published standard defining adversarial execution pr
 
 | Version | Date | Changes | Anchor |
 |---------|------|---------|--------|
-| 1.0 | 2026-07-14 | Initial publication. 40 threat models across 5 sections. Framework landscape table (30 entries). | See `anchor-pulse.json` | `CONTINUOUS` |
+| 1.0 | 2026-07-14 | Initial publication. 40 threat models across 5 sections. Framework landscape section (four categories, generalized). | See `anchor-pulse.json` |
 
 > This is a living document. Changes are tracked in the git commit history of this repository. Each significant revision will be accompanied by a new NIST Beacon pulse anchor committed alongside the updated file.
 
 ---
 
-
----
-
-*CC BY 4.0 - Attribution to Craig Ellrod / Nebulonium, Inc. required.*  
-*Proof Economy™ Standards Alliance (PESA) - proofprotocol.io*  
+*CC BY 4.0 - Attribution to Craig Ellrod / Nebulonium, Inc. required.*
+*Proof Economy™ Standards Alliance (PESA) - proofprotocol.io*
 *"Proof is the new Currency"*
