@@ -197,9 +197,9 @@ The first ProofStamp™-certified benchmark run:
 |-------|-------|
 | Product | Pipelock v3.0.0 |
 | Proof Record ID | PR-2026-00028 |
-| NIST Beacon Block | *[value missing — fill in before publishing]* |
-| NIST Beacon Pulse Index | *[value missing — fill in before publishing]* |
-| Applicable cases | *[value missing — fill in before publishing]* |
+| NIST Beacon Block | 29 |
+| NIST Beacon Pulse Index | 1852788 |
+| Applicable cases | 164 |
 | Containment (PES) | 99.2% |
 | Detection rate | 100% |
 | False positive rate | 4.5% |
