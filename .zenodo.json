@@ -1,0 +1,25 @@
+{
+  "title": "Proof Protocol Living Threat Model",
+  "upload_type": "publication",
+  "creators": [
+    {
+      "name": "Ellrod, Craig",
+      "affiliation": "Nebulonium, Inc. (HACKERverse)"
+    }
+  ],
+  "description": "Proof Protocol Living Threat Model",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "proof-protocol",
+    "threat-model"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/proofprotocol/threat-model",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "publication_type": "technicalnote"
+}
