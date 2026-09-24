@@ -13,6 +13,11 @@
 
 > **Anchor:** This document was first published on 2026-07-14 and anchored to the NIST Randomness Beacon at publication time. See `anchor-pulse.json` in this repository for the tamper-resistant timestamp. All subsequent revisions are recorded in the git commit history of this repository, which constitutes the provenance chain for this living document.
 
+## Cite as
+
+Ellrod, C. (2026). Proof Protocol Living Threat Model.
+Proof Economy Standards Alliance (PESA). https://doi.org/10.5281/zenodo.21379780
+
 ---
 
 ## What This Document Is
