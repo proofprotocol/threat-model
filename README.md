@@ -50,7 +50,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 | **Arena7™** | Adversarial execution engine |
 | **CHOMP™** | Threat intelligence ingestion |
 | **SHRED™** | Threat intelligence processing - campaign stream identification |
-| **AgenTwin™** | Independent witness outside agent trust boundary |
+| **ProofWitness™** | Independent witness outside agent trust boundary |
 | **ProofBundler™** | Self-contained proof artifact assembly |
 | **ProofChain™** | NIST Beacon anchoring |
 | **ProofRegister™** | Public proof registry |
@@ -71,7 +71,7 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 | 1.5 | Credential Theft and Identity Abuse | PTH, PTT, Kerberoasting, Golden/Silver Ticket, LDAP abuse | `CONTINUOUS` |
 | 1.6 | Lateral Movement | Network traversal, pivot chains, trust relationship abuse | `CONTINUOUS` |
 | 1.7 | Living Off the Land (LOTL) | LOLBins, LOLDrivers, LOLScripts; no custom malware | `CONTINUOUS` |
-| 1.8 | Fileless Malware | Memory-resident; AgenTwin™ witnesses outside process boundary | `CONTINUOUS` |
+| 1.8 | Fileless Malware | Memory-resident; ProofWitness™ witnesses outside process boundary | `CONTINUOUS` |
 | 1.9 | Insider Threat | Authorized-credential misuse; hardest detection problem | `CONTINUOUS` |
 | 1.10 | Social Engineering and Phishing | Spear phishing, vishing, smishing, BEC | `CONTINUOUS` |
 | 1.11 | Command and Control (C2) | Beacon, DNS tunneling, HTTPS C2, domain fronting, fast-flux | `CONTINUOUS` |
@@ -101,12 +101,12 @@ Proof Benchmark runs are **pre-dated by design**. Every other framework in the l
 | # | Threat Model | Notes | Timing |
 |---|---------------|-------|--------|
 | 3.1 | AI Agent Impersonation | PP-A2P™ requires proof exchange; impersonator cannot obtain ProofStamp™ | `CONTINUOUS` |
-| 3.2 | Prompt Injection - Direct and Indirect | Arena7™ executes injection chains; AgenTwin™ witnesses behavioral response | `CONTINUOUS` |
-| 3.3 | Multi-Agent Collusion | AgenTwin™ operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
+| 3.2 | Prompt Injection - Direct and Indirect | Arena7™ executes injection chains; ProofWitness™ witnesses behavioral response | `CONTINUOUS` |
+| 3.3 | Multi-Agent Collusion | ProofWitness™ operates outside every agent trust boundary simultaneously | `CONTINUOUS` |
 | 3.4 | Agentic Supply Chain Compromise | Malicious tool introduced into agent workflow | `CONTINUOUS` |
 | 3.5 | Model Poisoning and Training Data Attacks | Adversarial probing of poisoned model behavior | `CONTINUOUS` |
 | 3.6 | AI-Generated Malware and Synthetic TTPs | Novel, polymorphic, pre-classification techniques | `CONTINUOUS` |
-| 3.7 | Adversarial AI vs Defensive AI | Arena7™ as adversarial AI; AgenTwin™ witnesses defensive AI | `CONTINUOUS` |
+| 3.7 | Adversarial AI vs Defensive AI | Arena7™ as adversarial AI; ProofWitness™ witnesses defensive AI | `CONTINUOUS` |
 | 3.8 | Agent Authorization Escalation | Chained tool calls, each authorized, collectively unauthorized | `CONTINUOUS` |
 | 3.9 | Agentic Worms and Self-Propagating Agents | Autonomous replication across systems, networks, or agent meshes | `CONTINUOUS` |
 | 3.10 | Synthetic Identity and Deepfake Social Engineering | AI-generated voice, video, text for impersonation | `CONTINUOUS` |
@@ -184,11 +184,11 @@ None of them is an execution framework operated by a structurally independent ce
 | Adversarial execution | Arena7™ runs the attack | Documented, not executed |
 | Pre-execution tamper-resistance | NIST Beacon commitment before execution begins | Not a feature of taxonomies, governance frameworks, or regulations |
 | Day-zero / pre-CVE testing | Proprietary pipeline identifies emerging streams before classification | Reactive to known, classified threats |
-| Independent witness | AgenTwin™ operates outside agent trust boundary | Structural independence not provided by vendor tooling |
-| Numeric efficacy metric | PES – Blocked / (Blocked + Missed) × 100 | No numeric efficacy metric defined |
+| Independent witness | ProofWitness™ operates outside agent trust boundary | Structural independence not provided by vendor tooling |
+| Numeric efficacy metric | PES - Containment and Detection over Blocked + Observed + Missed (PP-SPEC-006) | No numeric efficacy metric defined |
 | Tamper-resistant proof artifact | ProofBundle™ – self-contained, offline-verifiable | Execution evidence not produced |
 | Independent certification | ProofStamp™ – issued by a disinterested third party | Vendor products certify their own customers, not independently |
-| Agentic behavior attestation | AgenTwin™ witnesses agent behavior outside trust boundary | Controls are described; behavior is not attested |
+| Agentic behavior attestation | ProofWitness™ witnesses agent behavior outside trust boundary | Controls are described; behavior is not attested |
 | Regulatory evidence | Every ProofStamp™ record satisfies EU AI Act, DORA, NIS2, CMMC evidentiary requirements | Regulations create the mandate; nothing else fills it |
 | Structural independence | HACKERverse does not sell the products it certifies | Vendor products certify their own customers |
 
