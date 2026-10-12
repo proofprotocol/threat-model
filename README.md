@@ -5,7 +5,7 @@
 **Document ID:** PP-THREAT-001
 **Version:** 1.0
 **Status:** Living Document
-**License:** Greater Good Commercial License 1.0 (GGL-C-1.0); text CC BY-ND 4.0 under Part S. See LICENSE.md.
+**License:** Greater Good Commercial License 1.0 (GGL-C-1.0); text CC BY 4.0 under Part S. See LICENSE.md.
 **Maintained by:** Proof Economy™ Standards Alliance (PESA)
 **Repository:** https://github.com/proofprotocol
 **Published:** 2026-07-14
